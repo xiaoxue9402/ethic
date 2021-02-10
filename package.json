@@ -1,0 +1,21 @@
+{
+  "name": "contacts-app",
+  "version": "1.0.0",
+  "description": "frontend exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shirley Zhang",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bootstrap": "^4.6.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.3.0",
+    "grunt-contrib-jshint": "^3.0.0",
+    "grunt-contrib-nodeunit": "^2.1.0",
+    "grunt-contrib-uglify": "^5.0.0"
+  }
+}
