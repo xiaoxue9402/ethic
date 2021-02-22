@@ -1,3 +1,7 @@
 .input {
   background: blue;
 }
+
+.card-text.name {
+  margin-right: 80%;
+}

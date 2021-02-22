@@ -2,63 +2,78 @@
   "contacts": [
     {
       "name": "Angie",
-      "number": 8628479392
+      "number": 8628479392,
+      "image": "./images/Angie.jpg"
     },
     {
       "name": "Beatrice",
-      "number": 9178324720
+      "number": 9178324720,
+      "image": "./images/Beatrice.jpg"
     },
     {
       "name": "Candice",
-      "number": 8624853750
+      "number": 8624853750,
+      "image": "./images/Candice.jpg"
     },
     {
       "name": "Carl",
-      "number": 8043742719
+      "number": 8043742719,
+      "image": "./images/Carl.jpg"
     },
     {
       "name": "Dave",
-      "number": 8621240412
+      "number": 8621240412,
+      "image": "./images/Dave.jpg"
     },
     {
       "name": "Eugene",
-      "number": 8621934852
+      "number": 8621934852,
+      "image": "./images/Eugene.jpg"
     },
     {
       "name": "Francis",
-      "number": 8625638282
+      "number": 8625638282,
+      "image": "./images/Francis.jpg"
     },
     {
       "name": "Lancelot",
-      "number": 8629103456
+      "number": 8629103456,
+      "image": "./images/Lancelot.jpg"
     },
     {
       "name": "Romeo",
-      "number": 7266652928
+      "number": 7266652928,
+      "image": "./images/Romeo.jpg"
     },
     {
       "name": "Tobias",
-      "number": 9174851938
+      "number": 9174851938,
+      "image": "./images/Tobias.jpg"
     },
     {
       "name": "Toby",
-      "number": 2932942947
+      "number": 2932942947,
+      "image": "./images/Toby.jpg"
     },
     {
       "name": "Tony",
-      "number": 8623456789
+      "number": 8623456789,
+      "image": "./images/Tony.jpg"
     },
     {
       "name": "Uncle Mike",
-      "number": 2123954957
+      "number": 2123954957,
+      "image": "./images/UncleMike.jpg"
     },
     {
       "name": "Zelda",
-      "number": 2349876547
+      "number": 2349876547,
+      "image": "./images/Zelda.jpg"
     },
     {
       "name": "Ziggy",
-      "number": 2347652323
+      "number": 2347652323,
+      "image": "./images/Ziggy.jpg"
     }
   ]
 }

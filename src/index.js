@@ -6,6 +6,7 @@ const searchSwitch = document.getElementById("search-switch");
 const searchInput = document.getElementById("search-input");
 const deleteButton = document.getElementById("delete-button");
 const keypadNums = document.getElementsByClassName("keypad-num");
+const contactList = document.getElementById("contacts-list");
 function onLoad() {
   searchSwitch.addEventListener("change", onSwitch);
   searchInput.addEventListener("input", event => onInput(event));
@@ -66,7 +67,6 @@ function onInput(event, key) {
           })
         );
         state.currentOptions = strings;
-        // findMatches(strings)
       } else {
         state.currentOptions = [...letters];
       }
@@ -89,13 +89,14 @@ async function loadContacts() {
 }
 
 function findMatches() {
+  contactList.innerHTML = ""
   let options = state.currentOptions
   console.log(options)
 
   if (!state.matches.length) {
     options.forEach(option => {
       state.contacts.forEach(contact => {
-        if (contact[state.searchBy].includes(option)) {
+        if (contact[state.searchBy].includes(option) && !state.matches.includes(contact)) {
           state.matches.push(contact)
         }
       })
@@ -110,6 +111,21 @@ function findMatches() {
       })
     })
     state.matches = newMatches
-    console.log(state)
   }
+  appendContactCard()
+}
+function appendContactCard() {
+  console.log(contactList)
+  let contactCards = state.matches.map(contact => {
+    let card = document.createElement("li")
+    card.innerHTML =
+      `<li class="contact-card list-group-item d-flex justify-content-between align-items-center" id=${contact.name}>
+
+        <img style="width: 50px; height: 50px;" src=${contact.image} class="contact-image card-img-top" />
+        <div class="card-text name">${contact.name}</div>
+        <div class="card-text number">${contact.number}</div>
+
+      </li>`
+    contactList.appendChild(card)
+  })
 }
