@@ -1,0 +1,64 @@
+{
+  "contacts": [
+    {
+      "name": "Angie",
+      "number": 8628479392
+    },
+    {
+      "name": "Beatrice",
+      "number": 9178324720
+    },
+    {
+      "name": "Candice",
+      "number": 8624853750
+    },
+    {
+      "name": "Carl",
+      "number": 8043742719
+    },
+    {
+      "name": "Dave",
+      "number": 8621240412
+    },
+    {
+      "name": "Eugene",
+      "number": 8621934852
+    },
+    {
+      "name": "Francis",
+      "number": 8625638282
+    },
+    {
+      "name": "Lancelot",
+      "number": 8629103456
+    },
+    {
+      "name": "Romeo",
+      "number": 7266652928
+    },
+    {
+      "name": "Tobias",
+      "number": 9174851938
+    },
+    {
+      "name": "Toby",
+      "number": 2932942947
+    },
+    {
+      "name": "Tony",
+      "number": 8623456789
+    },
+    {
+      "name": "Uncle Mike",
+      "number": 2123954957
+    },
+    {
+      "name": "Zelda",
+      "number": 2349876547
+    },
+    {
+      "name": "Ziggy",
+      "number": 2347652323
+    }
+  ]
+}
