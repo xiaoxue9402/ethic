@@ -8,101 +8,97 @@
 
 </head>
   <body>
-    <div class="container-md" id="app">
-      <div class="header">
-        <h1 class="header-text">Find Contacts</h1>
-        <div class="container">
-          <div class="row">
-            <div class="switch-text col-sm">By Name</div>
-            <div class="form-check form-switch col-sm">
-              <input class="form-check-input" type="checkbox" id="search-switch" data-type="name">
+    <div id="app">
+      <div class="app-body container-md">
+        <div class="header">
+          <h1 class="header-text">Find Contacts</h1>
+          <div class="container">
+            <div class="row">
+              <div class="switch-text col-sm">By Name</div>
+              <div class="form-check form-switch col-sm">
+                <input class="form-check-input" type="checkbox" id="search-switch" data-type="name">
+              </div>
+              <div class="switch-text col-sm">By Number</div>
             </div>
-            <div class="switch-text col-sm">By Number</div>
-          </div>
-
-        </div>
-
-      </div>
-      <div class="input">
-        <input id="search-input" type="text" name="search" defaultValue="search">
-        <img id="delete-button" src="./symbols/delete.svg" />
-      </div>
-      <div class="keypad container">
-        <div class="row row1">
-          <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-primary keypad-num" data-num="1">1</button>
-            <button type="button" class="btn btn-primary keypad-num" data-num="2">
-              <h1>2</h1>
-              <div class="button-text">
-                A&nbsp;B&nbsp;C
-              </div>
-            </button>
-            <button type="button" class="btn btn-primary keypad-num" data-num="3">
-              <h1>3</h1>
-              <div class="button-text">
-                D&nbsp;E&nbsp;F
-              </div>
-            </button>
           </div>
         </div>
-        <div class="row row2">
-          <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-primary keypad-num" data-num="4">
-              <h1>4</h1>
-              <div class="button-text">
-                G&nbsp;H&nbsp;I
-              </div>
-            </button>
-            <button type="button" class="btn btn-primary keypad-num" data-num="5">
-              <h1>5</h1>
-              <div class="button-text">
-                J&nbsp;K&nbsp;L
-              </div>
-            </button>
-            <button type="button" class="btn btn-primary keypad-num" data-num="6">
-              <h1>6</h1>
-              <div class="button-text">
-                M&nbsp;N&nbsp;O
-              </div>
-            </button>
-          </div>
+        <div class="input">
+          <input id="search-input" type="text" name="search" defaultValue="search">
+          <img id="delete-button" src="./symbols/delete.svg" />
         </div>
-        <div class="row row3">
-          <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-primary keypad-num" data-num="7">
-              <h1>7</h1>
-              <div class="button-text">
-                P&nbsp;Q&nbsp;R&nbsp;S
-              </div>
-            </button>
-            <button type="button" class="btn btn-primary keypad-num" data-num="8">
-              <h1>8</h1>
-              <div class="button-text">
-                T&nbsp;U&nbsp;V
-              </div>
-            </button>
-            <button type="button" class="btn btn-primary keypad-num" data-num="9">
-              <h1>9</h1>
-              <div class="button-text">
-                W&nbsp;X&nbsp;Y&nbsp;Z
-              </div>
-            </button>
+        <div class="keypad container">
+          <div class="row">
+              <button type="button" class="btn keypad-num col" data-num="1">1</button>
+              <button type="button" class="btn keypad-num col" data-num="2">
+                <h1>2</h1>
+                <div class="button-text">
+                  A&nbsp;B&nbsp;C
+                </div>
+              </button>
+              <button type="button" class="btn keypad-num col" data-num="3">
+                <h1>3</h1>
+                <div class="button-text">
+                  D&nbsp;E&nbsp;F
+                </div>
+              </button>
+            <div class="w-100"></div>
           </div>
-        </div>
-        <div class="row row4">
-          <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-primary">
+          <div class="row">
+              <button type="button" class="btn keypad-num col" data-num="4">
+                <h1>4</h1>
+                <div class="button-text">
+                  G&nbsp;H&nbsp;I
+                </div>
+              </button>
+              <button type="button" class="btn keypad-num col" data-num="5">
+                <h1>5</h1>
+                <div class="button-text">
+                  J&nbsp;K&nbsp;L
+                </div>
+              </button>
+              <button type="button" class="btn keypad-num col" data-num="6">
+                <h1>6</h1>
+                <div class="button-text">
+                  M&nbsp;N&nbsp;O
+                </div>
+              </button>
+            <div class="w-100"></div>
+          </div>
+          <div class="row">
+              <button type="button" class="btn keypad-num col" data-num="7">
+                <h1>7</h1>
+                <div class="button-text">
+                  P&nbsp;Q&nbsp;R&nbsp;S
+                </div>
+              </button>
+              <button type="button" class="btn keypad-num col" data-num="8">
+                <h1>8</h1>
+                <div class="button-text">
+                  T&nbsp;U&nbsp;V
+                </div>
+              </button>
+              <button type="button" class="btn keypad-num col" data-num="9">
+                <h1>9</h1>
+                <div class="button-text">
+                  W&nbsp;X&nbsp;Y&nbsp;Z
+                </div>
+              </button>
+              <div class="w-100"></div>
+            </div>
+            <div class="row">
+              <button type="button" class="btn col">
               <img src="./symbols/star.svg" />
-            </button>
-            <button type="button" class="btn btn-primary keypad-num" data-num="0">
-              <h1>0</h1>
-            </button>
-            <button type="button" class="btn btn-primary">
-              <img src="./symbols/pound.svg" />
-            </button>
+              </button>
+              <button type="button" class="btn keypad-num col" data-num="0">
+                <h1>0</h1>
+              </button>
+              <button type="button" class="btn col">
+                <img src="./symbols/pound.svg" />
+              </button>
+              <div class="w-100"></div>
+            </div>
           </div>
         </div>
-      </div>
       <div class="contacts">
         <ul id="contacts-list" class="list-group">
         </ul>

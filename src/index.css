@@ -1,7 +1,19 @@
-.input {
-  background: blue;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 .card-text.name {
   margin-right: 80%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.app-body {
+  background-image: linear-gradient(to bottom right, #04e7e7, #3d5afe,#251285);
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+.btn {
+  color: white;
+  border: solid 1px white;
 }
