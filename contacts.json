@@ -2,76 +2,91 @@
   "contacts": [
     {
       "name": "Angie",
+      "display_number": "862-847-9392",
       "number": 8628479392,
       "image": "./images/Angie.jpg"
     },
     {
       "name": "Beatrice",
+      "display_number": "917-832-4720",
       "number": 9178324720,
       "image": "./images/Beatrice.jpg"
     },
     {
       "name": "Candice",
+      "display_number": "862-485-3750",
       "number": 8624853750,
       "image": "./images/Candice.jpg"
     },
     {
       "name": "Carl",
+      "display_number": "804-374-2719",
       "number": 8043742719,
       "image": "./images/Carl.jpg"
     },
     {
       "name": "Dave",
+      "display_number": "862-124-0412",
       "number": 8621240412,
       "image": "./images/Dave.jpg"
     },
     {
       "name": "Eugene",
+      "display_number": "862-193-4852",
       "number": 8621934852,
       "image": "./images/Eugene.jpg"
     },
     {
       "name": "Francis",
+      "display_number": "862-563-8282",
       "number": 8625638282,
       "image": "./images/Francis.jpg"
     },
     {
       "name": "Lancelot",
+      "display_number": "862-910-3456",
       "number": 8629103456,
       "image": "./images/Lancelot.jpg"
     },
     {
       "name": "Romeo",
+      "display_number": "726-665-2928",
       "number": 7266652928,
       "image": "./images/Romeo.jpg"
     },
     {
       "name": "Tobias",
+      "display_number": "917-485-1938",
       "number": 9174851938,
       "image": "./images/Tobias.jpg"
     },
     {
       "name": "Toby",
+      "display_number": "293-294-2947",
       "number": 2932942947,
       "image": "./images/Toby.jpg"
     },
     {
       "name": "Tony",
+      "display_number": "862-345-6789",
       "number": 8623456789,
       "image": "./images/Tony.jpg"
     },
     {
       "name": "Uncle Mike",
+      "display_number": "212-395-4957",
       "number": 2123954957,
       "image": "./images/UncleMike.jpg"
     },
     {
       "name": "Zelda",
+      "display_number": "234-987-6547",
       "number": 2349876547,
       "image": "./images/Zelda.jpg"
     },
     {
       "name": "Ziggy",
+      "display_number": "234-765-2323",
       "number": 2347652323,
       "image": "./images/Ziggy.jpg"
     }

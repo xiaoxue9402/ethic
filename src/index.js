@@ -96,7 +96,7 @@ function findMatches() {
   if (!state.matches.length) {
     options.forEach(option => {
       state.contacts.forEach(contact => {
-        if (contact[state.searchBy].includes(option) && !state.matches.includes(contact)) {
+        if (contact[state.searchBy].toLowerCase().includes(option) && !state.matches.includes(contact)) {
           state.matches.push(contact)
         }
       })
@@ -123,7 +123,7 @@ function appendContactCard() {
 
         <img style="width: 50px; height: 50px;" src=${contact.image} class="contact-image card-img-top" />
         <div class="card-text name">${contact.name}</div>
-        <div class="card-text number">${contact.number}</div>
+        <div class="card-text number">${contact.display_number}</div>
 
       </li>`
     contactList.appendChild(card)
