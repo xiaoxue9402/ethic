@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", onLoad);
-const url = "http://localhost:3000/contacts"
+const url = "http://localhost:3000/contacts";
 
 const app = document.getElementById("app");
 const searchSwitch = document.getElementById("search-switch");
@@ -15,13 +15,13 @@ function onLoad() {
   keys.forEach(key =>
     key.addEventListener("click", event => onInput(event, key))
   );
-  loadContacts()
+  loadContacts();
   console.log("loooaaaadddeed");
 }
 let state = {
   searchBy: "name",
   keyLetters: {
-    "1": [''],
+    "1": [""],
     "2": ["a", "b", "c"],
     "3": ["d", "e", "f"],
     "4": ["g", "h", "i"],
@@ -32,7 +32,7 @@ let state = {
     "9": ["w", "x", "y", "z"],
     "0": [" "],
     "#": ["#"],
-    "'*'": ["'*'", '']
+    "'*'": ["'*'", ""]
   },
   currentInput: "",
   currentOptions: [],
@@ -44,6 +44,11 @@ function onSwitch() {
     ? (searchSwitch.dataset.type = "number")
     : (searchSwitch.dataset.type = "name");
   state.searchBy = searchSwitch.dataset.type;
+  state.currentOptions = [];
+  state.currentInput = "";
+  searchInput.value = "";
+  state.matches = [];
+  findMatches();
   console.log(searchSwitch.dataset.type);
 }
 
@@ -56,15 +61,15 @@ function onInput(event, key) {
       );
       searchInput.value = state.currentOptions[0];
       state.currentInput = state.currentOptions[0];
-      state.matches = []
+      state.matches = [];
     } else {
-      deleteButton.setAttribute("style", "display: none")
-      state.matches = state.contacts
+      deleteButton.setAttribute("style", "display: none");
+      state.matches = state.contacts;
     }
-    findMatches()
+    findMatches();
   } else if (event.type === "click") {
-    deleteButton.setAttribute("style", "display: contents")
-    let num = key.dataset.num
+    deleteButton.setAttribute("style", "display: contents");
+    let num = key.dataset.num;
 
     if (state.searchBy === "name") {
       let letters = state.keyLetters[num];
@@ -84,71 +89,77 @@ function onInput(event, key) {
       searchInput.value = state.currentInput;
     }
     if (state.searchBy === "number") {
-      state.currentOptions = [state.currentInput + num]
-      state.currentInput = state.currentInput + num
-      searchInput.value = state.currentInput
+      state.currentOptions = [state.currentInput + num];
+      state.currentInput = state.currentInput + num;
+      searchInput.value = state.currentInput;
     }
   }
-  findMatches()
+  findMatches();
 }
 
-
 async function loadContacts() {
-  let options = state.currentOptions
+  let options = state.currentOptions;
   if (state.contacts.length === 0) {
-    const res = await axios.get(url)
-    state.contacts = [...res.data]
+    const res = await axios.get(url);
+    state.contacts = [...res.data];
   }
-  appendContactCard()
+  appendContactCard();
 }
 
 function findMatches() {
-  contactList.innerHTML = ""
-  let options = state.currentOptions
-  console.log(options)
+  contactList.innerHTML = "";
+  let options = state.currentOptions;
+  console.log(options);
   if (state.searchBy === "name") {
     if (!state.matches.length) {
       options.forEach(option => {
         state.contacts.forEach(contact => {
-          if (contact[state.searchBy].includes(option) && !state.matches.includes(contact)) {
-            state.matches.push(contact)
+          if (
+            contact[state.searchBy].includes(option) &&
+            !state.matches.includes(contact)
+          ) {
+            state.matches.push(contact);
           }
-        })
-      })
+        });
+      });
     } else {
-      let newMatches = []
+      let newMatches = [];
       options.forEach(option => {
         state.matches.forEach(contact => {
-          if (contact[state.searchBy].includes(option) && !newMatches.includes(contact)) {
-            newMatches.push(contact)
+          if (
+            contact[state.searchBy].includes(option) &&
+            !newMatches.includes(contact)
+          ) {
+            newMatches.push(contact);
           }
-        })
-      })
-      state.matches = newMatches
+        });
+      });
+      state.matches = newMatches;
     }
   } else {
-    console.log(state)
-    state.matches = state.contacts.filter(contact => contact["display_number"].includes(state.currentInput))
+    console.log(state);
+    state.matches = state.contacts.filter(contact =>
+      contact["display_number"].includes(state.currentInput)
+    );
   }
-  appendContactCard()
+  appendContactCard();
 }
 
 function appendContactCard() {
-  let contacts = state.contacts
+  let contacts = state.contacts;
   if (state.matches.length && state.currentInput.length) {
-    contacts = state.matches
+    contacts = state.matches;
   }
-  console.log(contactList)
+  console.log(contactList);
   let contactCards = contacts.map(contact => {
-    let card = document.createElement("li")
-    card.innerHTML =
-      `<li class="contact-card list-group-item" id=${contact.name}>
+    let card = document.createElement("li");
+    card.innerHTML = `<li class="contact-card list-group-item" id=${contact.name}>
 
         <img class="img-thumbnail" src=${contact.image} class="contact-image card-img-top" />
         <div class="card-text name">${contact.display_name}</div>
         <div class="card-text number">${contact.display_number}</div>
 
-      </li>`
-    contactList.appendChild(card)
-  })
+      </li>`;
+    contactList.appendChild(card);
+  });
 }
