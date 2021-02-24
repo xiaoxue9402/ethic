@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 @supports (-webkit-backdrop-filter: blur(30px) saturate(160%) contrast(45%) brightness(140%)) or
   (backdrop-filter: blur(30px) saturate(160%) contrast(45%) brightness(140%)) {
-    .header, .keypad{
+    .header-content, .keypad{
       width: 100%;
       background-color: rgba(255, 255, 255, 0.2);
      backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(120%);
@@ -14,6 +14,7 @@
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 3fr 1.5fr;
+  height: 60px;
 }
 
 ul {
@@ -21,9 +22,10 @@ ul {
 }
 
 .app-body {
+  display: block;
   background-image: linear-gradient(to bottom right, #04e7e7, #3d5afe,#251285);
   font-family: 'Montserrat', sans-serif;
-  width: 480px;
+  width: 500px;
   color: white;
   padding: 0;
 }
@@ -38,6 +40,10 @@ ul {
 }
 .btn:hover {
   color: gray;
+  fill: gray;
+}
+.btn img:hover {
+  fill: gray;
 }
 .input {
   display: flex;
@@ -46,16 +52,25 @@ ul {
 .contacts {
     font-family: 'Montserrat', sans-serif;
     color: black;
+    height: 300px;
+    overflow: scroll;
 }
 
 .header.container {
   display: grid;
   grid-template-columns: 25% 10% 25%;
   justify-content: center;
+  padding-bottom: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
 }
 
 .header-text {
   text-align: center;
+  padding-top: 16px;
 }
 .switch-text.name {
   text-align: right;
@@ -86,4 +101,19 @@ input {
   border: none;
   display: none;
   padding: 5px;
+}
+
+button img {
+  height: 20px;
+}
+
+.img-thumbnail {
+  border-radius: 100px;
+  border: none;
+  height: 50px;
+  padding: 4px;
+}
+.keypad {
+  display: grid;
+  align-items: flex-end;
 }

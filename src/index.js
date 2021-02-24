@@ -131,7 +131,7 @@ function appendContactCard() {
     card.innerHTML =
       `<li class="contact-card list-group-item" id=${contact.name}>
 
-        <img style="width: 50px; height: 50px;" src=${contact.image} class="contact-image card-img-top" />
+        <img class="img-thumbnail" src=${contact.image} class="contact-image card-img-top" />
         <div class="card-text name">${contact.display_name}</div>
         <div class="card-text number">${contact.display_number}</div>
 
