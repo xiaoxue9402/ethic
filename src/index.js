@@ -44,7 +44,7 @@ function onSwitch() {
 }
 
 function onInput(event, key) {
-  if (event.target.id === "delete-button") {
+  if (event.target.id === "delete") {
     if (searchInput.value.length > 0) {
       let options = state.currentOptions;
       state.currentOptions = options.map(
@@ -52,9 +52,15 @@ function onInput(event, key) {
       );
       searchInput.value = state.currentOptions[0];
       state.currentInput = state.currentOptions[0];
+      state.matches = []
+    } else {
+      deleteButton.setAttribute("style", "display: none")
+      state.matches = state.contacts
     }
+    findMatches()
   } else if (event.type === "click") {
-    let num = key.dataset.num;
+    deleteButton.setAttribute("style", "display: contents")
+    let num = key.dataset.num
 
     if (state.searchBy === "name") {
       let letters = state.keyLetters[num];
@@ -83,9 +89,8 @@ async function loadContacts() {
   if (state.contacts.length === 0) {
     const res = await axios.get(url)
     state.contacts = [...res.data]
-    console.log(state)
   }
-
+  appendContactCard()
 }
 
 function findMatches() {
@@ -96,7 +101,7 @@ function findMatches() {
   if (!state.matches.length) {
     options.forEach(option => {
       state.contacts.forEach(contact => {
-        if (contact[state.searchBy].toLowerCase().includes(option) && !state.matches.includes(contact)) {
+        if (contact[state.searchBy].includes(option) && !state.matches.includes(contact)) {
           state.matches.push(contact)
         }
       })
@@ -114,15 +119,20 @@ function findMatches() {
   }
   appendContactCard()
 }
+
 function appendContactCard() {
+  let contacts = state.contacts
+  if (state.matches.length && state.currentInput.length) {
+    contacts = state.matches
+  }
   console.log(contactList)
-  let contactCards = state.matches.map(contact => {
+  let contactCards = contacts.map(contact => {
     let card = document.createElement("li")
     card.innerHTML =
-      `<li class="contact-card list-group-item d-flex justify-content-between align-items-center" id=${contact.name}>
+      `<li class="contact-card list-group-item" id=${contact.name}>
 
         <img style="width: 50px; height: 50px;" src=${contact.image} class="contact-image card-img-top" />
-        <div class="card-text name">${contact.name}</div>
+        <div class="card-text name">${contact.display_name}</div>
         <div class="card-text number">${contact.display_number}</div>
 
       </li>`

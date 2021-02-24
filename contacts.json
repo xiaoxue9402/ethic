@@ -1,91 +1,106 @@
 {
   "contacts": [
     {
-      "name": "Angie",
+      "display_name": "Angie",
+      "name": "angie",
       "display_number": "862-847-9392",
       "number": 8628479392,
       "image": "./images/Angie.jpg"
     },
     {
-      "name": "Beatrice",
+      "display_name": "Beatrice",
+      "name": "beatrice",
       "display_number": "917-832-4720",
       "number": 9178324720,
       "image": "./images/Beatrice.jpg"
     },
     {
-      "name": "Candice",
+      "display_name": "Candice",
+      "name": "candice",
       "display_number": "862-485-3750",
       "number": 8624853750,
       "image": "./images/Candice.jpg"
     },
     {
-      "name": "Carl",
+      "display_name": "Carl",
+      "name": "carl",
       "display_number": "804-374-2719",
       "number": 8043742719,
       "image": "./images/Carl.jpg"
     },
     {
-      "name": "Dave",
+      "display_name": "Dave",
+      "name": "dave",
       "display_number": "862-124-0412",
       "number": 8621240412,
       "image": "./images/Dave.jpg"
     },
     {
-      "name": "Eugene",
+      "display_name": "Eugene",
+      "name": "eugene",
       "display_number": "862-193-4852",
       "number": 8621934852,
       "image": "./images/Eugene.jpg"
     },
     {
-      "name": "Francis",
+      "display_name": "Francis",
+      "name": "francis",
       "display_number": "862-563-8282",
       "number": 8625638282,
       "image": "./images/Francis.jpg"
     },
     {
-      "name": "Lancelot",
+      "display_name": "Lancelot",
+      "name": "lancelot",
       "display_number": "862-910-3456",
       "number": 8629103456,
       "image": "./images/Lancelot.jpg"
     },
     {
-      "name": "Romeo",
+      "display_name": "Romeo",
+      "name": "romeo",
       "display_number": "726-665-2928",
       "number": 7266652928,
       "image": "./images/Romeo.jpg"
     },
     {
-      "name": "Tobias",
+      "display_name": "Tobias",
+      "name": "tobias",
       "display_number": "917-485-1938",
       "number": 9174851938,
       "image": "./images/Tobias.jpg"
     },
     {
-      "name": "Toby",
+      "display_name": "Toby",
+      "name": "toby",
       "display_number": "293-294-2947",
       "number": 2932942947,
       "image": "./images/Toby.jpg"
     },
     {
-      "name": "Tony",
+      "display_name": "Tony",
+      "name": "tony",
       "display_number": "862-345-6789",
       "number": 8623456789,
       "image": "./images/Tony.jpg"
     },
     {
-      "name": "Uncle Mike",
+      "display_name": "Uncle Mike",
+      "name": "uncle mike",
       "display_number": "212-395-4957",
       "number": 2123954957,
       "image": "./images/UncleMike.jpg"
     },
     {
-      "name": "Zelda",
+      "display_name": "Zelda",
+      "name": "zelda",
       "display_number": "234-987-6547",
       "number": 2349876547,
       "image": "./images/Zelda.jpg"
     },
     {
-      "name": "Ziggy",
+      "display_name": "Ziggy",
+      "name": "ziggy",
       "display_number": "234-765-2323",
       "number": 2347652323,
       "image": "./images/Ziggy.jpg"

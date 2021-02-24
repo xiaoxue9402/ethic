@@ -10,8 +10,10 @@
 
   }
 
-.card-text.name {
-  margin-right: 80%;
+.contact-card {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 3fr 1.5fr;
 }
 
 ul {
@@ -21,14 +23,22 @@ ul {
 .app-body {
   background-image: linear-gradient(to bottom right, #04e7e7, #3d5afe,#251285);
   font-family: 'Montserrat', sans-serif;
+  width: 480px;
   color: white;
   padding: 0;
 }
 .btn {
+  display: grid;
+  align-items: center;
+  justify-content: center;
   color: white;
   border: solid 1px white;
+  border-radius: 0;
+  height: 80px;
 }
-
+.btn:hover {
+  color: gray;
+}
 .input {
   display: flex;
   width: 100%;
@@ -36,4 +46,44 @@ ul {
 .contacts {
     font-family: 'Montserrat', sans-serif;
     color: black;
+}
+
+.header.container {
+  display: grid;
+  grid-template-columns: 25% 10% 25%;
+  justify-content: center;
+}
+
+.header-text {
+  text-align: center;
+}
+.switch-text.name {
+  text-align: right;
+}
+.switch-text {
+  text-align: left;
+}
+
+.form-switch {
+  display: flex;
+  justify-content: center;
+}
+.input.container {
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+  align-items: center;
+  height: 60px;
+}
+input {
+  background-color: inherit;
+  border: none;
+  color: white;
+  text-align: center;
+}
+
+#delete-button {
+  background-color: inherit;
+  border: none;
+  display: none;
+  padding: 5px;
 }
