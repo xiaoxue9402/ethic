@@ -86,6 +86,8 @@ ul {
 }
 .input.container {
   display: grid;
+  margin: 10px 0;
+  font-size: 20px;
   grid-template-columns: 8fr 1fr;
   align-items: center;
   height: 60px;

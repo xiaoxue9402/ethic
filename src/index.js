@@ -137,7 +137,6 @@ function findMatches() {
       state.matches = newMatches;
     }
   } else {
-    console.log(state);
     state.matches = state.contacts.filter(contact =>
       contact["display_number"].includes(state.currentInput)
     );
@@ -147,7 +146,7 @@ function findMatches() {
 
 function appendContactCard() {
   let contacts = state.contacts;
-  if (state.matches.length && state.currentInput.length) {
+  if (state.currentInput.length) {
     contacts = state.matches;
   }
   console.log(contactList);
