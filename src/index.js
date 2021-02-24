@@ -21,6 +21,7 @@ function onLoad() {
 let state = {
   searchBy: "name",
   keyLetters: {
+    "1": [''],
     "2": ["a", "b", "c"],
     "3": ["d", "e", "f"],
     "4": ["g", "h", "i"],
@@ -28,7 +29,10 @@ let state = {
     "6": ["m", "n", "o"],
     "7": ["p", "q", "r", "s"],
     "8": ["t", "u", "v"],
-    "9": ["w", "x", "y", "z"]
+    "9": ["w", "x", "y", "z"],
+    "0": [" "],
+    "#": ["#"],
+    "'*'": ["'*'", '']
   },
   currentInput: "",
   currentOptions: [],
@@ -79,6 +83,11 @@ function onInput(event, key) {
       state.currentInput = state.currentOptions[0];
       searchInput.value = state.currentInput;
     }
+    if (state.searchBy === "number") {
+      state.currentOptions = [state.currentInput + num]
+      state.currentInput = state.currentInput + num
+      searchInput.value = state.currentInput
+    }
   }
   findMatches()
 }
@@ -97,25 +106,29 @@ function findMatches() {
   contactList.innerHTML = ""
   let options = state.currentOptions
   console.log(options)
-
-  if (!state.matches.length) {
-    options.forEach(option => {
-      state.contacts.forEach(contact => {
-        if (contact[state.searchBy].includes(option) && !state.matches.includes(contact)) {
-          state.matches.push(contact)
-        }
+  if (state.searchBy === "name") {
+    if (!state.matches.length) {
+      options.forEach(option => {
+        state.contacts.forEach(contact => {
+          if (contact[state.searchBy].includes(option) && !state.matches.includes(contact)) {
+            state.matches.push(contact)
+          }
+        })
       })
-    })
+    } else {
+      let newMatches = []
+      options.forEach(option => {
+        state.matches.forEach(contact => {
+          if (contact[state.searchBy].includes(option) && !newMatches.includes(contact)) {
+            newMatches.push(contact)
+          }
+        })
+      })
+      state.matches = newMatches
+    }
   } else {
-    let newMatches = []
-    options.forEach(option => {
-      state.matches.forEach(contact => {
-        if (contact[state.searchBy].includes(option) && !newMatches.includes(contact)) {
-          newMatches.push(contact)
-        }
-      })
-    })
-    state.matches = newMatches
+    console.log(state)
+    state.matches = state.contacts.filter(contact => contact["display_number"].includes(state.currentInput))
   }
   appendContactCard()
 }

@@ -54,6 +54,7 @@ ul {
     color: black;
     height: 300px;
     overflow: scroll;
+    background: white;
 }
 
 .header.container {
